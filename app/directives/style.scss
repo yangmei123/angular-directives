@@ -1,0 +1,85 @@
+.alert-div {
+    position: fixed;
+    z-index: 9999;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 15px 25px;
+}
+.single-button {
+    padding-right: 16px !important;
+    line-height: 17px !important;
+}
+
+.single-button .select {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.single-button .caret {
+    position: absolute;
+    top: 14px;
+    right: 5px;
+}
+.alert-box{
+	position: fixed;
+    top: 45%;
+    left: 40%;
+    width: 20%;
+    z-index: 9999;
+}
+.disabled_select {
+    color: #ccc!important;
+    cursor: no-drop!important;
+}
+.checked_select {
+    color: #444!important;
+    border-color: #ddd!important;
+}
+#dropdown-list-btn .dropdown-menu{
+    right: 0;
+    left: initial;
+    top: 34px;
+    min-width: 100px;
+    max-width: 200px;
+    max-height: 200px;
+}
+#dropdown-list-btn .dropdown-menu.scrolly{
+    overflow-y: scroll;
+}
+.btn-group, .btn-group-vertical{
+    display: block;
+}
+
+#dropdown-list-btn .dropdown-menu > li > a{
+    padding: 3px 15px;
+    white-space: inherit;
+}
+#dropdown-list-btn .dropdown-menu > li{
+    display: block;
+}
+#dropdown-list-btn .single-button{
+    width: 100%;
+    // min-width: 100px;
+}
+#dropdown-list-btn .glyphicon-chevron-down{
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+.pr12 {
+    padding-right: 12px !important;
+}
+.imgbox {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #eee;
+    margin-bottom: 10px;
+    cursor:pointer;
+}
+.imgactive {
+    border: 3px solid #3C8DBC;
+}

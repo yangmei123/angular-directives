@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="app" ng-strict-di>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>angular-directives</title>
+</head>
+
+<body class="skin-blue sidebar-mini" ng-controller="LoginController">
+  <div class="wrapper" ng-click="hideBox()">
+      <!-- header -->
+      <header class="main-header" ng-include="headerUrl"></header>
+      <!-- menu -->
+      <aside class="main-sidebar" ng-include="sideUrl"></aside>
+      <!-- content -->
+      <div class="content-wrapper">
+          <!-- view -->
+          <section class="content" id="content" ui-view></section>
+      </div>
+      <footer class="main-footer" ng-include="footerUrl"></footer>
+      <!-- siderbar background -->
+      <div class="control-sidebar-bg"></div>
+  </div>
+</body>
+</html>

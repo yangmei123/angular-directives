@@ -1,0 +1,33 @@
+body {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+div.message a {
+    color: #000;
+}
+
+.sideBarMsg {
+    position: fixed !important;
+}
+
+.messageCon table td {
+    padding: 7px 8px 4px !important;
+}
+
+.text-muted {
+    color: #777;
+    max-height: 20px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -moz-box-orient: vertical;
+    -moz-line-clamp: 1;
+    box-orient: vertical;
+    line-clamp: 1;
+}
+
+.text-muted-date{
+    max-height: 30px;
+}

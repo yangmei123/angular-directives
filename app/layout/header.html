@@ -1,0 +1,28 @@
+<a class="logo">
+    <span class="logo-mini"><!--<b>A</b>yz--></span>
+    <span class="logo-lg" style="cursor: default;"><b>AD</b></span>
+</a>
+<nav class="navbar navbar-Static-top">
+    <span class="nav-span" style="cursor: default;">{{nav.navText}}</span>
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+                <a href="javascript:;" class="dropdown-toggle" ng-click="header_toggle($event)" data-toggle="dropdown" aria-expanded="false">
+                    <img src="{{imgUrl}}" class="user-image" alt="User Image">
+                    <span class="hidden-xs adminName_here">name</span>
+                </a>
+                <ul class="dropdown-menu" ng-show="open">
+                    <li class="user-header">
+                        <img src="{{imgUrl}}" class="img-circle" alt="User Image">
+                        <p class="adminName_here">name</p>
+                    </li>
+                    <li class="user-footer">
+                        <div class="pull-left"><a href="javascript:;" class="btn btn-default btn-flat" ng-click="uPassword()">修改密码</a></div>
+                        <div class="pull-right"><a href="javascript:;" class="btn btn-danger btn-flat" ng-click="loginOut()">注销</a></div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+

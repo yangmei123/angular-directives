@@ -1,0 +1,15 @@
+<ul class="sidebar-menu" id="treeview-li">
+    <li class="treeview"  ng-repeat="menu in data" ng-class="{active : menu.isActive}" ng-click="onClick(menu)">
+        <a href="{{menu.link_url}}" data-index="{{$index}}">
+            <i class="{{menu.class}}"></i>
+            <span>{{menu.module_name}}</span>
+            <span class="badge" ng-if="menu.badge && menu.badge > 0">{{ menu.badge }}</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li class="treeview" ng-repeat="submenu in menu.action" data-href="{{submenu.data}}" ng-class="{active : submenu.isActive}" ng-click="liClick(submenu,$event)">
+                <a href="{{submenu.data}}"><i class="fa fa-circle-o"></i>{{submenu.action_name}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>
