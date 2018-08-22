@@ -8,6 +8,7 @@ export default angular
 
 /* @ngInject */
 function confirmController($scope) {
+  $scope.nav.navText = '确认弹窗';
   $scope.confirmData = {};
   $scope.showConfirm = () => {
     $scope.confirmData.show = true;

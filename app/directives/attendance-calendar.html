@@ -1,0 +1,39 @@
+<div>
+    <table class="table table-bordered no-footer text-center calendar">
+        <thead>
+            <tr>
+                <th width="14.2%">日</th>
+                <th width="14.2%">一</th>
+                <th width="14.2%">二</th>
+                <th width="14.2%">三</th>
+                <th width="14.2%">四</th>
+                <th width="14.2%">五</th>
+                <th width="14.2%">六</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="week in months">
+                <td ng-repeat="day in week.week" class="p0" ng-class="{restDay : !day.attendances.workday.is_workday,today:day.isToday}">
+                    <div ng-class="{dayBox:true,otherMonth:day.otherMonth}">
+                        <div ng-if="(day.attendances.workday.is_workday || (day.attendances.checking.checkin_at || day.attendances.checking.checkin_out)) && day.isfuture == false">
+                            <p>上班打卡： {{day.attendances.checking.checkin_at}}</p>
+                            <p>下班打卡： {{day.attendances.checking.checkout_at}}</p>
+                        </div>
+                        <p class="mt5 mb5">
+                            <span class="label label-success mr5" ng-repeat="o in day.attendances.overtimes" ng-if="o.duration != 0">加班</span>
+                            <span class="label label-danger mr5" ng-if="day.attendances.is_checkin_missing && day.attendances.workday.is_workday == true && day.isfuture == false">上班未打卡</span>
+                            <span class="label label-danger mr5" ng-if="day.attendances.is_checkout_missing && day.attendances.workday.is_workday == true && day.isfuture == false">下班未打卡</span>
+                            <span class="label label-warning mr5" ng-if="day.attendances.time_of_late != 0 && day.isfuture == false" ">迟到{{day.attendances.time_of_late}}分钟</span>
+                        <span class="label label-danger mr5 " ng-if="day.attendances.time_of_early_leave !=0 && day.isfuture==false "">早退{{day.attendances.time_of_early_leave}}分钟</span>
+                            <span class="label label-danger mr5" ng-if="day.attendances.is_absent_from_work != undefined && day.isfuture == false" ">旷工</span>
+                        <span class="label label-primary mr5 " ng-repeat="leave in day.attendances.leaves " ng-if="leave.duration !=0 ">{{leave.leave_type}}</span>
+                    </p>
+                </div>
+                <span ng-class="{rest : !day.attendances.workday.is_workday} " ng-if="!day.attendances.workday.is_workday ">休</span>
+                <span ng-class="{day:true,otherMonth:day.otherMonth} ">{{day.day}}</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>

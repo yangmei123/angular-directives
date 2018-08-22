@@ -17,7 +17,7 @@ function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $stateProvider
     .state('index', {
-      url: '/login',
+      url: '/index',
       template: indexTpl,
       controller: 'IndexController'
     });

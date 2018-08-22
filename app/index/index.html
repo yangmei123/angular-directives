@@ -1,1 +1,56 @@
 
+<div class="row">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-body">
+                <div class="col-md-12">
+                    <div class="col-md-10 pl0 pb15"><h1 class="mt0">{{today | date:"yyyy-MM"}}</h1></div>
+                    <div class="col-md-2 pr0">
+                        <button class="btn btn-default fr" ng-click="nextMonth()">&gt;</button>
+                        <button class="btn btn-default fr" ng-click="tMonth()">当月</button>
+                        <button class="btn btn-default fr" ng-click="preMonth()">&lt;</button>
+                    </div>
+                </div>
+                <div class="col-md-12 pl0 pr0 pb10">
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-aqua"><i class="fa fa-fw fa-sun-o"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">事假总时长</span>
+                                <span class="info-box-number">{{leave || 0}}<small>小时</small></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-red"><i class="fa fa-fw fa-street-view"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">病假总时长</span>
+                                <span class="info-box-number">{{sickLeave || 0}}<small>小时</small></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <span class="info-box-icon bg-green"><i class="fa fa-fw fa-bed"></i></span>
+                            <div class="info-box-content">
+                                <span class="info-box-text">迟到/早退总时长</span>
+                                <span class="info-box-number">{{late || 0}}/{{leaveEarly || 0}}<small>分钟</small></span>
+                            </div>
+                            <!-- /.info-box-content -->
+                        </div>
+                        <!-- /.info-box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <calendar today="today" data="calendarData" ></calendar>
+            </div>
+        </div>
+    </div>
+</div>

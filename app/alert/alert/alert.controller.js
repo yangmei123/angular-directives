@@ -8,6 +8,7 @@ export default angular
 
 /* @ngInject */
 function alertController($scope) {
+  $scope.nav.navText = '消息提醒';
   $scope.alertData = {
     type: 'alert-danger', // 提醒框样式成功alert-success
     msg: '备注不能为空！',
